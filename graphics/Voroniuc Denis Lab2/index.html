@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Voroniuc Denis Lab2</title>
+	</head>
+	<body onload="InitDemo();">
+		<canvas id="game-surface" width="800" height="500">
+			Your browser does not support HTML5
+		</canvas>
+		<br />
+		
+		
+		
+			<form>
+			<select id="choose">
+				<option value='cube'>Cube</option>
+				<option value='pyramid'>Pyramid</option>
+				<option value='sphere'>Sphere</option>
+				<option value='seashell'>Seashell</option>
+				
+			</select></br>
+			Field 1:
+			<input type="text" id="Field1"/>
+			Field 2:
+			<input type="text" id="Field2"/>
+			<input type="button" onclick="create(getElementById('choose').value,parseFloat(document.getElementById('Field1').value),parseFloat(document.getElementById('Field2').value))" value="Add">
+			<br/>
+	
+		 
+
+		
+		
+		<p id="NrElem">Nr of elements: 0</p>
+		
+		element nr in array to do all things:
+		 <input type="text" id="index">
+		 <input type="button" onclick="objects.splice(parseInt(document.getElementById('index').value),1);document.getElementById('NrElem').innerHTML='Nr of elements: '+objects.length" value="Remove">
+		 
+		 
+		</form>
+		<p id="rotx">rotation on x axes:</p>
+		<p id="roty">rotation on y axes:</p>
+		<p id="rotz">rotation on z axes</p>
+		
+		
+		
+		<script src="MV.js"></script>
+		<script src="gl-matrix.js"></script>
+		<script src="app.js"></script>
+		
+		
+	</body>
+</html>
